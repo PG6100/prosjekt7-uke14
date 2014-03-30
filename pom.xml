@@ -2,62 +2,42 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>no.nith.pg6100</groupId>
-    <artifactId>prosjekt6-uke12</artifactId>
+    <artifactId>prosjekt7-uke14</artifactId>
     <version>0.1</version>
-    <packaging>jar</packaging>
-    <name>prosjekt6-uke12</name>
-    <description>Øvingen er relatert til Sikkerhet forelesningen.</description>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <packaging>war</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>com.sun.xml.ws</groupId>
+            <artifactId>jaxws-rt</artifactId>
+            <version>2.2.9-b14002</version>
+        </dependency>
+
+        <!--<dependency>
+            <groupId>com.sun.xml.ws</groupId>
+            <artifactId>jaxws-rt</artifactId>
+            <version>2.2</version>
+            <scope>provided</scope>
+        </dependency>-->
+    </dependencies>
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-acr-plugin</artifactId>
-                <version>1.0</version>
-                <extensions>true</extensions>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.1</version>
                 <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <mainClass>no.nith.pg6100.Main</mainClass>
-                        </manifest>
-                    </archive>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
-            <plugin>
+            <!--<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>2.2</version>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <inherited>true</inherited>
                 <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>no.nith.pg6100.Main</mainClass>
-                        </manifest>
-                    </archive>
+                    <source>1.6</source>
+                    <target>1.6</target>
                 </configuration>
-            </plugin>
+            </plugin>-->
         </plugins>
-
-
     </build>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.glassfish.main.appclient</groupId>
-            <artifactId>gf-client</artifactId>
-            <version>4.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish</groupId>
-            <artifactId>javax.ejb</artifactId>
-            <version>3.0.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>javax.persistence</artifactId>
-            <version>2.0.0</version>
-        </dependency>
-    </dependencies>
 </project>

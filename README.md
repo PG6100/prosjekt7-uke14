@@ -8,4 +8,6 @@ Vi skal implementere enkel tjeneste som sjekker om kreditkortet er gyldig. To kl
 
 Consumer mappe inneholder oppsett for klienten som kaller `CardValidator` tjenesten. Bruk kommandoen `mvn clean generate-sources` for å generere JAXB artifakter.
 
+Hvis alt går bra, sjekk `http://localhost:8080/prosjekt7-uke14/CardValidatorService?wsdl`, og utforsk wsdl-en.
+
 
